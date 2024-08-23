@@ -79,7 +79,7 @@ button.addEventListener("click", function () {
     localStorage.setItem("email", Email.value);
     localStorage.setItem("Phonenumber", Phonenumber.value);
     localStorage.setItem("Password", Password.value);
-    window.location.href = "/chooselag/usalogin.html";
+    window.location.href = "/usalogin.html";
   }
   todoteleport = 0;
 });

@@ -42,7 +42,7 @@ button.addEventListener("click", function () {
   email();
   isValidPass();
   if (todoteleport == 2) {
-    window.location.href = "/chooselag/usatodo-list.html";
+    window.location.href = "/usatodo-list.html";
   }
   todoteleport = 0;
 });

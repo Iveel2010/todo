@@ -73,7 +73,7 @@ button.addEventListener("click", function () {
     localStorage.setItem("email", Email.value);
     localStorage.setItem("Phonenumber", Phonenumber.value);
     localStorage.setItem("Password", Password.value);
-    window.location.href = "/chooselag/mnlogin.html";
+    window.location.href = "/mnlogin.html";
   }
   todoteleport = 0;
 });
