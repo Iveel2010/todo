@@ -1,0 +1,675 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: skyblue;
+  height: 100vh;
+}
+.container2 {
+  display: flex;
+  justify-content: center;
+  height: 750px;
+  width: 500px;
+  background-image: url(image.png);
+  background-size: cover;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.userimg {
+  width: 95px;
+  height: 95px;
+  border-radius: 50px;
+}
+.userimgaddress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.userlogo {
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  background-color: white;
+  border: skyblue 3px solid;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background-color: white;
+  height: 750px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.addtag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  height: 120px;
+  width: 500px;
+}
+#listContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  gap: 55px;
+  width: 100%;
+}
+.btns {
+  display: flex;
+  gap: 10px;
+  width: 160px;
+}
+.wrapper {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100px;
+}
+
+#txt {
+  font-size: 1.2em;
+  text-align: center;
+  color: skyblue;
+  padding: 30px 30px 10px 30px;
+  font-family: "Roboto Mono", monospace;
+}
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.inputs input {
+  width: 2.8em;
+  font-size: 1.3em;
+  border: 2px solid skyblue;
+  border-radius: 0.1em;
+  color: skyblue;
+  padding: 0.4em 0.2em;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 190px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px skyblue solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: skyblue;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: skyblue;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: skyblue;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: skyblue;
+  transform: translateY(-30px);
+}
+.button {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid skyblue;
+  background-color: skyblue;
+}
+
+.button,
+.button__icon,
+.button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(10px);
+  color: #fff;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 30px;
+  background-color: skyblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 30px;
+  stroke: #fff;
+}
+
+.button:hover {
+  background: skyblue;
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 140px;
+  transform: translateX(0);
+}
+
+.button:active .button__icon {
+  background-color: skyblue;
+}
+
+.button:active {
+  border: 1px solid skyblue;
+}
+
+.edit-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  background-color: skyblue;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.edit-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+}
+
+.edit-svgIcon path {
+  fill: white;
+}
+
+.edit-button:hover {
+  width: 110px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  background-color: skyblue;
+  align-items: center;
+}
+
+.edit-button:hover .edit-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.edit-button::before {
+  display: none;
+  content: "Засварлах";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.edit-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+
+.delete-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  background-color: skyblue;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.delete-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+}
+
+.delete-svgIcon path {
+  fill: white;
+}
+
+.delete-button:hover {
+  width: 100px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  background-color: skyblue;
+  align-items: center;
+}
+
+.delete-button:hover .delete-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.delete-button::before {
+  display: none;
+  content: "Устгах";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.delete-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+
+.container3 {
+  cursor: pointer;
+}
+
+.container3 input {
+  display: none;
+}
+
+.container3 svg {
+  overflow: visible;
+}
+
+.path {
+  fill: none;
+  stroke: skyblue;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+
+.container3 input:checked ~ svg .path {
+  stroke-dasharray: 70.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+}
+
+.done-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  background-color: #088f8f;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.done-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+}
+
+.done-svgIcon path {
+  fill: white;
+}
+
+.done-button:hover {
+  width: 100px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  background-color: #088f8f;
+  align-items: center;
+}
+
+.done-button:hover .edit-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.done-button::before {
+  display: none;
+  content: "Дууслаа";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.done-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+
+.form2-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 190px;
+}
+
+.form2-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #088f8f solid;
+  display: block;
+  width: 100%;
+  text-decoration: 2px solid black;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #088f8f;
+}
+
+.form2-control input:focus,
+.form2-control input:valid {
+  outline: 0;
+  border-bottom-color: #088f8f;
+}
+
+.form2-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form2-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: #088f8f;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form2-control input:focus + label span,
+.form2-control input:valid + label span {
+  color: #088f8f;
+  transform: translateY(-30px);
+}
+
+.completebtn-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  background-color: skyblue;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.completebtn-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+}
+
+.completebtn-svgIcon path {
+  fill: white;
+}
+
+.completebtn-button:hover {
+  width: 120px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  background-color: skyblue;
+  align-items: center;
+}
+
+.completebtn-button:hover .edit-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.completebtn-button::before {
+  display: none;
+  content: "Дууслаа";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.completebtn-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body,
+.wrapper,
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  width: 440px;
+  padding: 30px 30px 38px;
+  background: #fff;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.wrapper img {
+  max-width: 103px;
+}
+.wrapper h1 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0;
+}
+.wrapper .content {
+  width: 100%;
+  justify-content: space-between;
+}
+.content.disable {
+  cursor: no-drop;
+}
+.content .column {
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  width: calc(100% / 3 - 5px);
+}
+.content.disable .column {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.column select {
+  width: 100%;
+  height: 53px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 19px;
+}
+.wrapper button {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 17px 0;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: #4a98f7;
+}
+
+.userimgeditbtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  background-color: skyblue;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.userimgeditbtn-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+}
+
+.userimgeditbtn-svgIcon path {
+  fill: white;
+}
+
+.userimgeditbtn:hover {
+  width: 120px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  background-color: skyblue;
+  align-items: center;
+}
+.usercontainer {
+  display: flex;
+  flex-direction: column;
+}
+.username {
+  color: rgb(109, 197, 231);
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  border: none;
+  background: none;
+}
+.useremail {
+  margin-top: 20px;
+  color: rgb(109, 197, 231);
+  font-size: 30px;
+  font-style: italic;
+}
+.userphonenumber {
+  color: rgb(109, 197, 231);
+  font-size: 30px;
+  font-style: italic;
+}
+.userimgeditbtn:hover .userimgeditbtn-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.userimgeditbtn::before {
+  display: none;
+  content: "Дууслаа";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.userimgeditbtn:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}

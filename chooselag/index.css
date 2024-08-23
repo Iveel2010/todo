@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: skyblue;
+}
+
+#conatiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  height: 550px;
+}
+#flags {
+  display: flex;
+}
+.habitContainerc {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 200px;
+  display: flex;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.habitContainer {
+  display: flex;
+}
+.img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+#mongoliaflag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#usaflag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#mongoliaflagimg {
+  display: flex;
+  width: 300px;
+  height: 150px;
+}
+#usaflagimg {
+  display: flex;
+  width: 300px;
+  height: 150px;
+}
+#word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#mongoliaflagword {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+.or {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+#usaflagword {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+#mongoliaflagc {
+  padding: 10px 16px;
+  border: none;
+  background: none;
+}
+#usaflagc {
+  padding: 10px 16px;
+  border: none;
+  background: none;
+}
